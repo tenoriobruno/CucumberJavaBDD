@@ -13,24 +13,28 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
+import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
  
-public class SalarySteps { /*
+public class SalarySteps { 
 	SalaryManager manager;
- 
-	@Dado("^the salary management system is initialized with the following data$")
-	public void the_salary_management_system_is_initialized_with_the_following_data(final List<Employee> employees) throws Throwable {
+	
+	@Dado("^o sistema de gestão de salários é inicializado com os seguintes dados$")
+	//public void o_sistema_de_gestão_de_salários_é_inicializado_com_os_seguintes_dados(DataTable arg1)
+	public void o_sistema_de_gestão_de_salários_é_inicializado_com_os_seguintes_dados(final List<Employee> employees) throws Throwable {
 		manager = new SalaryManager(employees);
 	}
- 
-	@Quando("^the boss increases the salary for the employee with id '(\\d+)' by (\\d+)%$")
-	public void the_boss_increases_the_salary_for_the_employee_with_id_by(final int id, final int increaseInPercent) throws Throwable {
+
+	@Quando("^o chefe chefe aumenta o salário do empregado com id '(\\d+)' para (\\d+)%$")
+	public void o_chefe_chefe_aument_o_salário_do_empregado_com_id_para(final int id, final int increaseInPercent) throws Throwable {
 		manager.increaseSalary(id, increaseInPercent);
 	}
- 
-	@Entao("^the payroll for the employee with id '(\\d+)' should display a salary of (\\d+)$")
-	public void the_payroll_for_the_employee_with_id_should_display_a_salary_of(final int id, final float salary) throws Throwable {
+
+	@Então("^o pagamento do o empregado com id '(\\d+)' deve mostrar o salário de (\\d+)$")
+	public void o_pagamento_do_o_empregado_com_id_deve_mostrar_o_salário_de(final int id, final float salary) throws Throwable {
 		Employee nominee = manager.getPayroll(id);
+		//System.out.println("salario"+nominee.getSalary());
 		assertThat(nominee.getSalary(), equalTo(salary));
-	} */
+	}
+
 }

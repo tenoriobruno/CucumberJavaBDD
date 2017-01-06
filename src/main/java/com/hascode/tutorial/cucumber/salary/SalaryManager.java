@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
  
-public class SalaryManager { /*
+public class SalaryManager {
 	private Map<Integer, Employee> employees = new HashMap<>();
  
 	public SalaryManager(final List<Employee> employees) {
@@ -16,10 +16,11 @@ public class SalaryManager { /*
 	public void increaseSalary(final Integer id, final int increaseInPercent) {
 		Employee nominee = employees.get(id);
 		float oldSalary = nominee.getSalary();
-		nominee.setSalary(oldSalary + oldSalary * increaseInPercent / 100);
+		float newSalary = oldSalary + oldSalary * increaseInPercent / 100;
+		nominee.setSalary(newSalary);
 	}
  
 	public Employee getPayroll(final int id) {
 		return employees.get(id);
-	} */
+	}
 }

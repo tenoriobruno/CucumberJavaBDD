@@ -1,6 +1,6 @@
 package com.hascode.tutorial.cucumber.salary;
  
-public class Employee { /*
+public class Employee {
 	private int id;
 	private String user;
 	private float salary;
@@ -22,12 +22,6 @@ public class Employee { /*
 	public void setSalary(float salary) {
 		this.salary = salary;
 	}
-	public Employee(int id, String user, float salary) {
-		super();
-		this.id = id;
-		this.user = user;
-		this.salary = salary;
-	}
  
-	// constructor, getter, setter ommitted */
+	
 }
